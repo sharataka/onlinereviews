@@ -1,29 +1,110 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @company.name %>
-</p>
+<div class = "row">
+  <div class = "col-md-4">
+  <h1><%= @company.name %></h1>
+  <h2><small><%= @company.numRatings %> ratings</small></h2>
+  <p><a>Eyewear</a>, <a>Glasses</a>, <a>Sunglasses</a>
 
-<p>
-  <strong>Website:</strong>
-  <%= @company.website %>
-</p>
+    
 
-<p>
-  <strong>Numratings:</strong>
-  <%= @company.numRatings %>
-</p>
+    <!-- Website -->
+    <p>
+        <i class="fa fa-external-link" aria-hidden="true"></i> &nbsp;
 
-<p>
-  <strong>Avgrating:</strong>
-  <%= @company.avgRating %>
-</p>
+        <a href = "<%= @company.website %>" target = "_blank">
+          <%= @company.website %>
+        </a>
+    </p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @company.description %>
-</p>
+    <!-- Phone number -->
+    <p>
+        <i class="fa fa-phone" aria-hidden="true"></i> &nbsp;
+        <%= @company.phoneNumber %>
+    </p>
+
+    <!-- Twitter -->
+    <p>
+        <i class="fa fa-twitter" aria-hidden="true"></i> &nbsp;
+        <a href = "http://twitter.com/<%= @company.twitter %>" target = "_blank">@<%= @company.twitter %></a>
+    </p>
+
+    <!-- Description -->
+    <p>
+      <i class="fa fa-info-circle" aria-hidden="true"></i> &nbsp;
+      <%= @company.description %>
+    </p>
+</div>
+
+    <!-- Header images -->
+    <div class = "col-md-4">
+        <center>
+            <img src="https://pbs.twimg.com/profile_images/764189347755220992/kMSyoIS3_400x400.jpg" class = "img-responsive img-rounded">
+        </center>
+    </div>
+
+    <div class = "col-md-4">
+        <center>
+            <img src="https://pbs.twimg.com/profile_images/764189347755220992/kMSyoIS3_400x400.jpg" class = "img-responsive img-rounded">
+        </center>
+    </div>
+
+
+</div>
+<!-- End of row -->
+
+<div class = "row">
+    <div class = "col-md-8">
+
+    
+
+
+    <div class = "row">
+        <hr>
+        <div class = "col-md-2">
+            <a href="#">
+              <img class="media-object" src="..." alt="...">
+              Sharat A.
+            </a>
+        </div>
+
+        <div class = "col-md-10">
+            <h4>Rating goes here</h4>
+            This is a review text.This is a review text.This is a review text.This is a review text.This is a review text.This is a review text.This is a review text.This is a review text.This is a review text.This is a review text.This is a review text.
+        </div>
+        <hr>
+    </div>
+
+    <div class = "row">
+        <hr>
+        <div class = "col-md-2">
+            <a href="#">
+              <img class="media-object" src="..." alt="...">
+              Sharat A.
+            </a>
+        </div>
+
+        <div class = "col-md-10">
+            <h4>Rating goes here</h4>
+            This is a review text.This is a review text.This is a review text.This is a review text.This is a review text.This is a review text.This is a review text.This is a review text.This is a review text.This is a review text.This is a review text.
+        </div>
+        <hr>
+    </div>
+
+    </div>
+
+
+    <!-- Right rail -->
+    <div class = "col-md-4">
+
+        <hr>
+
+        <img src="https://pbs.twimg.com/profile_images/764189347755220992/kMSyoIS3_400x400.jpg" class = "img-responsive img-rounded">
+    </div>
+    <!-- End of right rail -->
+
+</div>
+<!-- End of row -->
 
 <%= link_to 'Edit', edit_company_path(@company) %> |
 <%= link_to 'Back', companies_path %>
